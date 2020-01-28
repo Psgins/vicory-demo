@@ -11,7 +11,8 @@ import SimpleBoxPlot from './SimpleBoxPlot';
 import Group from './Group';
 import GroupStack from './GroupStack';
 import ComponentAxis from './ComponentAxis';
-import ComponentChart from './ComponentChart';
+import ComponentPolarAxis from './ComponentPolarAxis';
+import ContainerVictory from './ContainerVictory';
 import ComponentLabel from './ComponentLabel';
 import ComponentLegend from './ComponentLegend';
 import ComponentTooltip from './ComponentTooltip';
@@ -21,9 +22,13 @@ import ContainerZoom from './ContainerZoom';
 import ContainerBrush from './ContainerBrush';
 import ContainerVoronoi from './ContainerVoronoi';
 import ContainerCreateContainer from './ContainerCreateContainer';
-import SimpleLineWithVictoryChart from './SimpleLineWithVictoryChart';
+import ExampleChartMixUp from './ExampleChartMixUp';
+import ExampleContainerMixUp from './ExampleContainerMixUp';
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    margin: theme.spacing(10, 2, 0, 2),
+  },
   header: {
     margin: theme.spacing(4, 0),
   },
@@ -38,17 +43,19 @@ const Landing: FC = () => {
     <SimplePie />,
     <SimpleArea />,
     <SimpleBoxPlot />,
-    <SimpleLineWithVictoryChart />,
+    <ExampleChartMixUp />,
   ];
   const chartComponents = [
     <ComponentAxis />,
-    <ComponentChart />,
+    <ComponentPolarAxis />,
     <ComponentLabel />,
     <ComponentLegend />,
     <ComponentTooltip />,
+    <ExampleContainerMixUp />,
   ];
   const chartGroup = [<Group />, <GroupStack />];
   const chartContainer = [
+    <ContainerVictory />,
     <ContainerDefault />,
     <ContainerCursor />,
     <ContainerZoom />,
@@ -65,7 +72,7 @@ const Landing: FC = () => {
     'victory-brush-line',
   ];
   return (
-    <>
+    <div className={classes.root}>
       <div>
         <Typography className={classes.header} variant="h4">
           Chart
@@ -126,7 +133,7 @@ const Landing: FC = () => {
           ))}
         </Grid>
       </div>
-    </>
+    </div>
   );
 };
 
