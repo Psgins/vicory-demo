@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
+import ExampleBox from '../shared/ExampleBox';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import BarAdjustable from './BarAdjustable';
-import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -12,17 +12,16 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Bar: FC = () => {
+const Playground: FC = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <Typography className={classes.header} variant="h4">
-        VictoryBar
+        Playground
       </Typography>
-      <Typography variant="h6">Properties</Typography>
-      <BarAdjustable />
+      <ExampleBox width={450} height={300}></ExampleBox>
     </div>
   );
 };
 
-export default Bar;
+export default Playground;
