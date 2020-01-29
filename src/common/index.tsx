@@ -21,12 +21,12 @@ const useStyles = makeStyles(theme => ({
 const CommonUsed: FC = () => {
   const classes = useStyles();
   const examples = [
-    <PropAnimate />,
     <PropData />,
+    <PropStyle />,
     <PropEvents />,
     <PropLabels />,
+    <PropAnimate />,
     <PropStandalone />,
-    <PropStyle />,
   ];
   return (
     <div className={classes.root}>
@@ -36,7 +36,7 @@ const CommonUsed: FC = () => {
         </Typography>
         <Grid container>
           {examples.map((example, index) => (
-            <Grid item xs={12}>
+            <Grid item xs={12} key={index}>
               {example}
             </Grid>
           ))}
