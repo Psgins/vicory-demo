@@ -28,6 +28,7 @@ const PropEvents: FC = () => {
               target: 'data',
               eventHandlers: {
                 onClick: event => {
+                  // do something here eg.calculation
                   return [
                     {
                       target: 'data',

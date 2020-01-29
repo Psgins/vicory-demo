@@ -57,11 +57,11 @@ const Landing: FC = () => {
   const chartContainer = [
     <ContainerVictory />,
     <ContainerDefault />,
-    <ContainerCursor />,
     <ContainerZoom />,
     <ContainerBrush />,
     <ContainerVoronoi />,
     <ContainerCreateContainer />,
+    <ContainerCursor />,
   ];
   const unsupportedByTypes = [
     'victory-polar-axis',

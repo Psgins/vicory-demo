@@ -4,11 +4,11 @@ import { VictoryBar } from 'victory';
 import ExampleBox from '../shared/ExampleBox';
 
 const data = [
-  { somethingA: 1, somethingB: 1 },
-  { somethingA: 2, somethingB: 5 },
-  { somethingA: 3, somethingB: 4 },
-  { somethingA: 4, somethingB: 6 },
-  { somethingA: 5, somethingB: 9 },
+  { somethingA: 1, somethingB: 1, label: 'label1' },
+  { somethingA: 2, somethingB: 5, label: 'label5' },
+  { somethingA: 3, somethingB: 4, label: 'label4' },
+  { somethingA: 4, somethingB: 6, label: 'label6' },
+  { somethingA: 5, somethingB: 9, label: 'label9' },
 ];
 
 const useStyles = makeStyles(theme => ({
